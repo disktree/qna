@@ -1,0 +1,9 @@
+-js web/app.js
+-main Main
+-cp src
+-lib om.core
+-lib om.tfjs
+-dce full
+-debug
+-D analyzer-optimize
+-D js-es=6

@@ -1,0 +1,124 @@
+
+:root {
+    --bg: #000;
+    --fg: #fff;
+    --acc: #00ffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-family: monospace;
+    line-height: 1.4em;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    background:var(--bg);
+    color: var(--fg);
+    padding: 2px;
+}
+
+::selection {
+    background: var(--acc);
+    color: var(--bg);
+}
+
+::-webkit-scrollbar {
+	border: none;
+}
+::-webkit-scrollbar:vertical {
+    width: 0px;
+}
+::-webkit-scrollbar:horizontal {
+	display: none;
+}
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+    display: none !important;
+}
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+input {
+    font-family: monospace;
+    display: block;
+    outline: none;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+textarea {
+    line-height: 1.6em;
+}
+textarea::-webkit-scrollbar:vertical {
+    width: 4px;
+}
+textarea::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: var(--bg);
+    border: 1px solid var(--fg);
+}
+textarea::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+    background: var(--acc);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+#knowledge {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    min-height: 8rem;
+    padding: 1rem;
+    line-height: 1.4em;
+    resize: none;
+}
+
+#qa {
+    display: table;
+    padding: 1rem 0.5rem;
+}
+
+#qa > form[name="question"] {
+    display: block;
+    min-width: 50vw;
+}
+#qa > form[name="question"] > input[name="question"] {
+    padding: 1.25rem 1rem;
+    font-weight: 900;
+    /* font-size: 150%; */
+    width: 100%;
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px dotted var(--fg);
+}
+
+#qa > ol.answers {
+    padding: 1.5rem 1rem;
+}
+#qa > ol.answers > li.answer {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--fg);
+}
+#qa > ol.answers > li.answer > .meta {
+    font-size: 60%;
+}

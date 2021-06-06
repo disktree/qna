@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+        <meta name="keywords" content="qna,tf">
+        <title>QnA</title>
+        <link rel="stylesheet" href="app.css">
+        <link rel="icon" href="https://disktree.net/favicon.svg" type="image/svg+xml">
+        <script src="script/tfjs.js" defer></script>
+        <script src="script/qna.js" defer></script> 
+        <script src="app.js" async></script>
+    </head>
+    <body>
+        <textarea id="knowledge" placeholder="Knowledge …"></textarea>
+        <div id="qa">
+            <form name="question">
+                <input type="search" name="question" placeholder="Question …" title="Question" minlength="2" maxlength="512" autofocus>
+            </form>
+            <ol class="answers">LOADING …</ol>
+        </div>
+    </body>
+</html>
