@@ -111,14 +111,24 @@ ol, ul {
     color: var(--fg);
     border: 1px dotted var(--fg);
 }
+#qa > form[name="question"] > input[name="question"]:focus {
+    border: 1px solid var(--fg);
+}
 
 #qa > ol.answers {
     padding: 1.5rem 1rem;
 }
 #qa > ol.answers > li.answer {
     padding: 1rem 0;
-    border-bottom: 1px solid var(--fg);
+    border-bottom: 1px dotted var(--fg);
 }
 #qa > ol.answers > li.answer > .meta {
+    font-size: 60%;
+}
+
+footer {
+    position: fixed;
+    right: 1ch;
+    bottom: 1ch;
     font-size: 60%;
 }
